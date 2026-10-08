@@ -35,6 +35,16 @@ npx playwright install chromium
 
 The Playwright HTML report is written to `playwright-report/`; failure traces and test artifacts are written to `test-results/`.
 
+## Deploying to Vercel
+
+The repository includes `vercel.json` with the Vite production build settings. To publish it:
+
+1. Import `WillGarp/pirate-battle` from the Vercel dashboard.
+2. Keep the detected Vite framework, `npm run build` build command, and `dist` output directory.
+3. Deploy. No environment variables are required for the mock-backed version.
+
+The ranking and history remain browser-side MSW mocks after deployment; this does not connect the game to a production backend.
+
 ## Controls
 
 - `W`, `A`, `S`, `D` or arrow keys: move in eight directions
